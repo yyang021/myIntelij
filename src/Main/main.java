@@ -8,10 +8,37 @@ public class main {
 
     static int stages = 1;
     static int rounds = 1;
-
     /*发牌*/
-    public static void giveCard(int stages){
-
+    public static void fapai(player p1,player p2,heguan h1){
+        ArrayList<card>list=new ArrayList<>();
+        int color[]={1,2,3,4};
+        int[] number = {2,3,4,5,6,7,8,9,10,11,12,13,14};
+        //将52张牌存入牌盒
+        for (int i = 0; i < color.length; i++) {
+            for (int j = 0; j < number.length; j++) {
+                list.add(new card(number[j],color[i]))  ;
+            }
+        }
+        //打乱扑克
+        Collections.shuffle(list);
+        //取头七张
+        card t1[]=new card[2];
+        card t2[]=new card[2];
+        card t3[]=new card[5];
+        for (int i = 0; i < 7; i++) {
+            if(i<=1) {
+                t1[i] = list.get(i);
+            }
+            else if(i>1&&i<=3){
+                t2[i-2]=list.get(i);
+            }
+            else{
+                t3[i-4]=list.get(i);
+            }
+        }
+        p1.setHandCard(t1);
+        p2.setHandCard(t2);
+        h1.setCard(t3);
     }
 
     /*1.preflop*/
