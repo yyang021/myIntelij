@@ -1,0 +1,21 @@
+package Main;
+
+import Player.card;
+
+
+public class heguan {
+    //公选牌
+    public card card[]=new card[5];
+
+
+    public heguan() {
+    }
+
+    public Player.card getCard(int i) {
+        return card[i];
+    }
+
+    public void setCard(Player.card[] card) {
+        this.card = card;
+    }
+}
