@@ -13,10 +13,11 @@ public class main {
         ArrayList<card>list=new ArrayList<>();
         int color[]={1,2,3,4};
         int[] number = {2,3,4,5,6,7,8,9,10,11,12,13,14};
+        int cardWeight[]={0,1,2,3,4,5,6,7,8,9,10,11,12};
         //将52张牌存入牌盒
         for (int i = 0; i < color.length; i++) {
             for (int j = 0; j < number.length; j++) {
-                list.add(new card(number[j],color[i]))  ;
+                list.add(new card(number[j],color[i],cardWeight[j]))  ;
             }
         }
         //打乱扑克
