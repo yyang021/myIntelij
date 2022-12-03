@@ -1,7 +1,24 @@
 package Card;
 
 public class card {
-    int[] number = {2,3,4,5,6,7,8,9,10,11,12,13,14};
-    int[] color = {1,2,3,4};    //1为♥,2为♦,3为♠,4为♣
+   int number ;
+    int color ;//1为♥,2为♦,3为♠,4为♣
+    int weight;//设置权值
     boolean exitCard = true;    //牌存在为:true
+
+    public card(int number, int color,int weight) {
+        this.number = number;
+        this.color = color;
+        this.weight=weight;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "card" + color +number +weight;
+
+
+
+    }
 }
